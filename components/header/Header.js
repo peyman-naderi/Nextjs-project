@@ -2,12 +2,14 @@ import Logo from "./Logo"
 import Menu from "./Menu"
 import Search from "./SearchHeader"
 import ShopHeader from "./ShopHeader"
+import RegistrationButton from "./RegistrationButton"
+import LoginButton from "./LoginButton"
 
  export default function Header() {
     return(
-        <header className="mx-auto">
+        <header>
             <div
-             className="continer justify-between" style={{
+             className="continer items-center pt-9 px-12 w-full justify-between" style={{
                 backgroundImage: `url("/bg.png")`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
@@ -15,14 +17,16 @@ import ShopHeader from "./ShopHeader"
                 color: "white",
                 }}>
                     
-                    <div className="flex justify-between pt-9">
-                        <div className="flex items-center ">      
+                    <div className="flex justify-between ">
+                        <div className="flex gap-x-14 items-center ">      
                             <Logo />
                             <Menu />
                         </div>
-                        <div className="flex gap-x-3">
+                        <div className="flex items-center">
                             <Search />
                             <ShopHeader />
+                            <RegistrationButton />        
+                            <LoginButton /> 
                         </div>
                     </div>
 

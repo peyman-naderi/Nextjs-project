@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ShopHeader({count}) {
     return(
-        <div className="relative">
+        <div className="relative ">
             <Link href="/shop">
                 {/* آیکون سبد خرید */}
                 <ShoppingCart size={29} color="white" />

@@ -11,7 +11,7 @@ export default function Menu() {
     return (
         <div className="flex gap-x-7">
             {navLinks.map((item, index) => (
-                <a key={index} href={item.href} className="flex items-center gap-x-2 text-2xl ">
+                <a key={index} href={item.href} className="flex items-center gap-x-2 font-normal text-2xl ">
                     {item.icon && item.icon()} {/* آیکون نمایش داده می‌شود */}
                     <span className="order-first">{item.label}</span> {/* متن بعد از آیکون می‌آید */}
                 </a>
