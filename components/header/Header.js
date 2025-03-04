@@ -18,7 +18,7 @@ import LoginButton from "./LoginButton"
                 }}>
                     
                     <div className="flex justify-between ">
-                        <div className="flex gap-x-14 items-center ">      
+                        <div className="flex gap-x-16 items-center ">      
                             <Logo />
                             <Menu />
                         </div>
