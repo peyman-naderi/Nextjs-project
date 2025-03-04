@@ -1,4 +1,4 @@
-import RegisterPage from "@/components/header/Login/regester"
+import RegisterPage from "@/components/header/auth/regester"
 
 export default function regesterpages() {
     return(
