@@ -16,7 +16,7 @@ export default function LoginPage() {
     const password = useRef("");
 
     const searchParams = useSearchParams();
-    const callbackUrl = searchParams.get("callbackUrl") || "";
+    const callbackUrl = searchParams.get("callbackUrl") || "/";
 
     const onSubmit = async (e) => {
         e.preventDefault();
