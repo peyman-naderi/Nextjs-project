@@ -5,7 +5,9 @@ import Search from "./SearchHeader"
 import ShopHeader from "./ShopHeader"
 import RegistrationButton from "./RegistrationButton"
 import LoginButton from "./LoginButton"
+
 import { LogOut } from "lucide-react"
+import Link from "next/link"
 import { useSession, signOut } from "next-auth/react";
 
 
@@ -40,9 +42,12 @@ import { useSession, signOut } from "next-auth/react";
                             {session ? (
                             <div className="flex pr-3 items-center gap-x-2">
                                 <span className="text-xl items-center text-gray-300">سلام، {session.user.name}</span>
-                                <button onClick={() => signOut()}>
-                                <LogOut className="text-gray-300"/>
-                                </button>
+                               
+                                <Link href="/signout">
+                                    <LogOut className="text-gray-300"/>
+                                </Link>
+                                
+                                
                             </div>
                             ) : (
                             <div className="flex gap-4">
