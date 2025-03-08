@@ -23,7 +23,7 @@ export default function SignOutButton() {
                         خروج
                     </h3>
                     <p className="mt-2 text-gray-500">
-                        واقعاً میخوای بری بیرون ؟؟
+                        واقعاً میخوای بری بیرون ؟
                     </p>
 
                     <div className="mt-6 flex justify-center gap-x-4">

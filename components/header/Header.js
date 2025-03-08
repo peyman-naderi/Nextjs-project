@@ -5,10 +5,9 @@ import Search from "./SearchHeader"
 import ShopHeader from "./ShopHeader"
 import RegistrationButton from "./RegistrationButton"
 import LoginButton from "./LoginButton"
-
 import { LogOut } from "lucide-react"
 import Link from "next/link"
-import { useSession, signOut } from "next-auth/react";
+import { useSession} from "next-auth/react";
 
 
 
@@ -18,39 +17,32 @@ import { useSession, signOut } from "next-auth/react";
 
     return(
         <>
-
-
-        <header>
+        <header className=" w-full min-h-[80px]"> 
             <div
-             className="continer items-center pt-9 px-12 w-full justify-between" style={{
+             className=" pt-9 xl:px-14 px-4 sm:px-8 lg:px-2" style={{
                 backgroundImage: `url("/bg.png")`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 height: "100vh",
                 color: "white",
                 }}>
-                    
-                    <div className="flex justify-between ">
-                        <div className="flex gap-x-16 items-center ">      
+                    <div className="flex  justify-between ">
+                        <div className="flex gap-x-8  xl:gap-x-20 items-center ">  
                             <Logo />
                             <Menu />
                         </div>
                         <div className="flex items-center">
                             <Search />
                             <ShopHeader />
-
                             {session ? (
-                            <div className="flex pr-3 items-center gap-x-2">
+                            <div className="hidden lg:flex pr-3 items-center gap-x-2">
                                 <span className="text-xl items-center text-gray-300">سلام، {session.user.name}</span>
-                               
                                 <Link href="/signout">
                                     <LogOut className="text-gray-300"/>
                                 </Link>
-                                
-                                
                             </div>
                             ) : (
-                            <div className="flex gap-4">
+                            <div className="flex md:gap-x-3">
                                 <RegistrationButton />        
                                 <LoginButton /> 
                             </div>
@@ -58,8 +50,6 @@ import { useSession, signOut } from "next-auth/react";
                         </div>
                     </div>
                 </div>
-
-            
         </header>
         </>
     )

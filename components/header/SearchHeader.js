@@ -1,12 +1,12 @@
-import { Search } from "lucide-react"
-import Link from "next/link"
+import { Search } from "lucide-react";
+import Link from "next/link";
 
 export default function SearchHeader() {
-    return(
-        <div className="text-red-400 pl-7">
+    return (
+        <div className="xl:pl-5 lg:pl-3 pl-3">
             <Link href="/search">
-                <Search size={28} color="white" /> 
+                <Search size={28} color="white" />
             </Link>
         </div>
-    )
+    );
 }
