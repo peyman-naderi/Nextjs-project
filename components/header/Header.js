@@ -11,25 +11,31 @@ import { useSession} from "next-auth/react";
 
 
 
+
+
+
  export default function Header() {
     const { data: session } = useSession();
-
+    
 
     return(
         <>
         <header className=" w-full min-h-[80px]"> 
             <div
              className=" pt-9 xl:px-14 px-4 sm:px-8 lg:px-2" style={{
-                backgroundImage: `url("/bg.png")`,
+              backgroundImage: `url("/bg.png")`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 height: "100vh",
                 color: "white",
                 }}>
                     <div className="flex  justify-between ">
-                        <div className="flex gap-x-8  xl:gap-x-20 items-center ">  
+                        <div className="flex gap-x-8  xl:gap-x-16 items-center ">  
                             <Logo />
-                            <Menu />
+                            <div className="hidden lg:flex">
+                              <Menu/>
+                            </div>
+                            
                         </div>
                         <div className="flex items-center">
                             <Search />
@@ -42,7 +48,7 @@ import { useSession} from "next-auth/react";
                                 </Link>
                             </div>
                             ) : (
-                            <div className="flex md:gap-x-3">
+                            <div className="lg:flex items-center hidden md:gap-x-3">
                                 <RegistrationButton />        
                                 <LoginButton /> 
                             </div>
@@ -51,6 +57,7 @@ import { useSession} from "next-auth/react";
                     </div>
                 </div>
         </header>
-        </>
+
+      </>
     )
 }
