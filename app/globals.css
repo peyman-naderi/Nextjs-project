@@ -4,12 +4,16 @@
 
 @font-face {
   font-family: "Vazir";
-  src: url("/public/font/Vazir.woff2") format("woff2"),
-       url("/public/font/Vazir.woff2") format("woff");
+  src: url("/font/Vazir.woff2") format("woff2"),
+       url("/font/Vazir.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
   
+body {
+  font-family: "Vazir", sans-serif;
+}
+
   body {
     font-family: "Vazir", sans-serif;
   }
@@ -29,4 +33,16 @@
     color: white;
     text-align: center;
   }
+
+
+  .backgrund {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url("/bg.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+  }
+  
+
   

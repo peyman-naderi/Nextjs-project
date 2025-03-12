@@ -10,9 +10,9 @@ export default function Menu() {
     
     return (
         <div>
-            <div className="lg:flex mt-4 lg:mt-0  gap-x-8 xl:gap-x-14">
+            <div className="lg:flex mt-4 lg:mt-0  gap-x-7 xl:gap-x-10">
                 {navLinks.map((item, index) => (
-                    <a key={index} href={item.href} className="flex text-black lg:text-white items-center text-xl  gap-x-1 xl:gap-x-2  lg:text-2xl">
+                    <a key={index} href={item.href} className="flex text-black lg:text-white items-center text-xl   xl:gap-x-2 xl:text-2xl lg:text-xl">
                         {item.icon && item.icon()} {/* آیکون نمایش داده می‌شود */}
                         <span className="order-first">{item.label}</span> {/* متن بعد از آیکون می‌آید */}
                     </a>

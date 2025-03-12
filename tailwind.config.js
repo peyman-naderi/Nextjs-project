@@ -6,7 +6,11 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        vazirmatn: ["Vazir", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };

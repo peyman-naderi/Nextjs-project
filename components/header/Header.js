@@ -21,16 +21,9 @@ import { useSession} from "next-auth/react";
     return(
         <>
         <header className=" w-full min-h-[80px]"> 
-            <div
-             className=" pt-9 xl:px-14 px-4 sm:px-8 lg:px-2" style={{
-              backgroundImage: `url("/bg.png")`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: "100vh",
-                color: "white",
-                }}>
-                    <div className="flex  justify-between ">
-                        <div className="flex gap-x-8  xl:gap-x-16 items-center ">  
+            <div className=" pt-9 xl:px-14 px-4 sm:px-8 lg:px-4">
+                    <div className="flex w-full justify-between ">
+                        <div className="flex gap-x-8  2xl:gap-x-14  xl:gap-x-8 items-center ">  
                             <Logo />
                             <div className="hidden lg:flex">
                               <Menu/>

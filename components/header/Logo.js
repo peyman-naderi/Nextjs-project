@@ -29,7 +29,7 @@ export default function Logo() {
             </div>
 
             {/* دکمه منوی همبرگری */}
-            <div className="flex lg:hidden -mt-3">
+            <div className="flex mr-2 lg:hidden -mt-3">
                 <button
                 onClick={() => setIsOpen(true)} // باز کردن منو
                 className="lg:hidden w-4 h-4"
@@ -44,7 +44,7 @@ export default function Logo() {
                     animate={{ x: 0 }} // موقعیت نهایی (باز شدن به موقعیت 0)
                     exit={{ x: "100%" }} // موقعیت هنگام بسته شدن (بازگشت به راست)
                     transition={{ type: "spring", stiffness: 300, damping: 30 }} // انیمیشن روان
-                    className="fixed top-0 right-0 pr-0 pt-10 w-64 h-full bg-white shadow-lg flex flex-col items-center p-6 space-y-6 z-50"
+                    className="fixed lg:hidden  top-0 right-0 pr-0 pt-10 w-64 h-full bg-white shadow-lg flex flex-col items-center p-6 space-y-6 z-50"
                     >
                     {/* دکمه بستن منو */}
                     <button
@@ -64,7 +64,7 @@ export default function Logo() {
                             <X size={28} />
                         </div>
     
-                        <Menu/>
+                        <Menu />
                         {session ? (
                             <div className="flex items-center gap-x-2 lg:hidden mt-5">
                                 <span className="text-xl items-center justify-center  text-blue-500 ">سلام، {session.user.name}</span>
