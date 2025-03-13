@@ -29,7 +29,7 @@ export default function Logo() {
             </div>
 
             {/* دکمه منوی همبرگری */}
-            <div className="flex mr-2 lg:hidden -mt-3">
+            <div className="flex mr-1 lg:hidden -mt-3">
                 <button
                 onClick={() => setIsOpen(true)} // باز کردن منو
                 className="lg:hidden w-4 h-4"
