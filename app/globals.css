@@ -36,13 +36,10 @@ body {
 
 
   .backgrund {
-
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url("/bg.png");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: auto; /* ارتفاع به اندازه محتوا */
+    min-height: 100vh; /* حداقل ارتفاع به اندازه صفحه */
     color: white;
-  }
-  
-
-  
+}
