@@ -8,9 +8,7 @@ import LoginButton from "./LoginButton"
 import { LogOut } from "lucide-react"
 import Link from "next/link"
 import { useSession} from "next-auth/react";
-
-
-
+ 
 
 
 

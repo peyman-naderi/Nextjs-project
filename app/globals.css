@@ -42,4 +42,7 @@ body {
     height: auto; /* ارتفاع به اندازه محتوا */
     min-height: 100vh; /* حداقل ارتفاع به اندازه صفحه */
     color: white;
-}
+    border-bottom-left-radius: 40% 15px;
+    border-bottom-right-radius: 40% 15px;
+  }
+
