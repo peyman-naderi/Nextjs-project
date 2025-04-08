@@ -15,7 +15,7 @@ import { useSession} from "next-auth/react";
  export default function Header() {
     const { data: session } = useSession();
     
-
+    //  throw new Error("");  => برای تست صفحه خطایابی
     return(
         <>
         <header className=" w-full min-h-[80px]"> 
