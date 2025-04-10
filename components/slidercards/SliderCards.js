@@ -22,14 +22,14 @@ export default function SliderCards() {
     loop: false,
     slides: {
       perView: 2, // نمایش ۶ کارت به صورت همزمان
-      spacing: 1, // فاصله کمتر بین کارت‌ها
+      spacing: 6, // فاصله کمتر بین کارت‌ها
     },
     breakpoints: {
       '(min-width: 640px)': {
         slides: { perView: 3, spacing: 4 },
       },
       '(min-width: 1024px)': {
-        slides: { perView: 5, spacing: 0 }, // تنظیم برای نمایش ۵ کارت در صفحه‌های بزرگتر
+        slides: { perView: 6, spacing: 0 }, // تنظیم برای نمایش ۵ کارت در صفحه‌های بزرگتر
       },
     },
   })
@@ -46,11 +46,11 @@ export default function SliderCards() {
       <div ref={sliderRef} className="keen-slider">
         {steps.map((step) => (
           <div key={step.id} className="keen-slider__slide flex justify-center">
-            <div className="bg-white rounded-xl shadow p-4 flex flex-col text-center h-full w-44">
+            <div className="bg-gray-50 mx-2  rounded-xl shadow  flex flex-col text-center h-full w-44">
               <div className="w-full h-24 relative mb-4">
                 <Image src={step.img} alt={step.title} fill className="object-cover" />
               </div>
-              <h3 className="font-bold text-right text-lg">{step.title}</h3>
+              <h3 className="font-bold mr-2 mb-4 text-right text-lg">{step.title}</h3>
             </div>
           </div>
         ))}
