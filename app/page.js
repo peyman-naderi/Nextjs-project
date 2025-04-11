@@ -6,15 +6,19 @@ import SliderCards from "@/components/slidercards/SliderCards";
 
 export default function Home() {
   return (
-    <>
-        <div className="backgrund font-vazirmatn">
+    <div className="font-vazirmatn">
+        <div className="backgrund">
           <Header />
           <HeroText />
           <SearchBox />
           <StatCards />
-        </div> 
+        </div>
+
+        <div className="lg:mx-10">
           <SliderCards />
-    </>
+        </div> 
+          
+    </div>
 
   );
 }

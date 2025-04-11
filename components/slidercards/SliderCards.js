@@ -21,15 +21,15 @@ export default function SliderCards() {
   const [sliderRef] = useKeenSlider({
     loop: false,
     slides: {
-      perView: 2, // نمایش ۶ کارت به صورت همزمان
-      spacing: 6, // فاصله کمتر بین کارت‌ها
+      perView: 2, 
+      spacing: 6, 
     },
     breakpoints: {
       '(min-width: 640px)': {
-        slides: { perView: 3, spacing: 4 },
+        slides: { perView: 4, spacing: 4 },
       },
       '(min-width: 1024px)': {
-        slides: { perView: 6, spacing: 0 }, // تنظیم برای نمایش ۵ کارت در صفحه‌های بزرگتر
+        slides: { perView: 6, spacing: 0 },
       },
     },
   })
