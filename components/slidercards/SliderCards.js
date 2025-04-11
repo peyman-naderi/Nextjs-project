@@ -40,17 +40,16 @@ export default function SliderCards() {
         می‌خوام <span className="text-blue-600">وردپرس</span> کار حرفه‌ای بشم!
       </h2>
       <p className="text-center text-gray-600 mb-8">
-        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ...
-      </p>
+      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است.</p>
 
       <div ref={sliderRef} className="keen-slider">
         {steps.map((step) => (
-          <div key={step.id} className="keen-slider__slide flex justify-center">
-            <div className="bg-gray-50 mx-2  rounded-xl shadow  flex flex-col text-center h-full w-44">
-              <div className="w-full h-24 relative mb-4">
-                <Image src={step.img} alt={step.title} fill className="object-cover" />
+          <div key={step.id} className="keen-slider__slide flex justify-center ">
+            <div className="bg-white border-2 mx-2 border-solid  shadow-xl/70  flex flex-col rounded-3xl text-center h-full w-44">
+              <div className="w-full  h-36 relative mb-4">
+                <Image src={step.img} alt={step.title} fill className="object-cover rounded-t-3xl" />
               </div>
-              <h3 className="font-bold mr-2 mb-4 text-right text-lg">{step.title}</h3>
+              <h3 className="font-semibold mr-2 mb-4 text-right text-base">{step.title}</h3>
             </div>
           </div>
         ))}
