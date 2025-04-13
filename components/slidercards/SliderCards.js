@@ -3,6 +3,7 @@
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 import SliderCard from '@/common/SliderCard'
+import { useState } from 'react'
 
 const steps = [
   { title: 'گام ۱', img: '/p1.png' },
@@ -18,24 +19,33 @@ const steps = [
 ]
 
 export default function SliderCards() {
-  const [sliderRef] = useKeenSlider({
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [sliderRef, instanceRef] = useKeenSlider({
     loop: false,
+    rtl: true, 
     slides: {
-      perView: 2.2,
+      perView: 2,
       spacing: 6,
     },
     breakpoints: {
       '(min-width: 640px)': {
-        slides: { perView: 4.5, spacing: 4 },
+        slides: { perView: 4, spacing: 4 },
       },
       '(min-width: 1024px)': {
-        slides: { perView: 6.5, spacing: 0 },
+        slides: { perView: 6, spacing: 0 },
       },
+    },
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel)
     },
   })
 
+  const totalSlides = instanceRef.current?.track.details?.slides.length || 0
+  const perView = instanceRef.current?.options.slides?.perView || 1
+  const dotCount = Math.ceil(steps.length - (perView - 1)) 
+
   return (
-    <div className="w-full px-4 md:px-10 py-10">
+    <div className="w-full px-4 md:px-10 py-10 bg-gray-50 rounded-xl shadow-lg">
       <h2 className="text-center text-2xl font-bold mb-6">
         می‌خوام <span className="text-blue-600">وردپرس</span> کار حرفه‌ای بشم!
       </h2>
@@ -43,11 +53,24 @@ export default function SliderCards() {
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است.
       </p>
 
-      <div ref={sliderRef} className="keen-slider">
+      <div ref={sliderRef} className="keen-slider flex flex-row-reverse">
         {steps.map((step, index) => (
           <div key={index} className="keen-slider__slide flex justify-center">
             <SliderCard imgsrc={step.img} title={step.title} />
           </div>
+        ))}
+      </div>
+
+      {/* نقاط پایین اسلایدر */}
+      <div className="flex justify-center mt-6 gap-3 rtl:flex-row-reverse">
+        {[...Array(dotCount)].map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => instanceRef.current?.moveToIdx(idx)}
+            className={`w-4 h-4 rounded-full transition-all duration-300 ${
+              currentSlide === idx ? 'bg-blue-600 scale-110' : 'bg-gray-400'
+            }`}
+          />
         ))}
       </div>
     </div>
