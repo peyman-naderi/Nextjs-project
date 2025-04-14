@@ -3,7 +3,7 @@ import HeroText from "@/components/hero/HeroText";
 import SearchBox from "@/components/hero/SearchBox";
 import StatCards from "@/components/statcards/StatCards";
 import SliderCards from "@/components/slidercards/SliderCards";
-
+import Productcart from "@/components/productscard/ProductCard";
 export default function Home() {
   return (
     <div className="font-vazirmatn">
@@ -16,6 +16,7 @@ export default function Home() {
 
         <div className="lg:mx-10">
           <SliderCards />
+          <Productcart />
         </div> 
           
     </div>

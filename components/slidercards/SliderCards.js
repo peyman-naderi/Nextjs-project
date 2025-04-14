@@ -20,9 +20,11 @@ const steps = [
 
 export default function SliderCards() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [perView, setPerView] = useState(1)
+
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: false,
-    rtl: true, 
+    rtl: true,
     slides: {
       perView: 2,
       spacing: 6,
@@ -34,18 +36,21 @@ export default function SliderCards() {
       '(min-width: 1024px)': {
         slides: { perView: 6, spacing: 0 },
       },
+
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel)
     },
+    created(slider) {
+      const pv = slider.options.slides?.perView
+      setPerView(typeof pv === 'number' ? pv : 1)
+    },
   })
 
-  const totalSlides = instanceRef.current?.track.details?.slides.length || 0
-  const perView = instanceRef.current?.options.slides?.perView || 1
-  const dotCount = Math.ceil(steps.length - (perView - 1)) 
+  const dotCount = Math.ceil(steps.length - (perView - 1))
 
   return (
-    <div className="w-full px-4 md:px-10 py-10 bg-gray-50 rounded-xl shadow-lg">
+    <div className="w-full px-2 md:px-10 py-10">
       <h2 className="text-center text-2xl font-bold mb-6">
         می‌خوام <span className="text-blue-600">وردپرس</span> کار حرفه‌ای بشم!
       </h2>
@@ -62,7 +67,7 @@ export default function SliderCards() {
       </div>
 
       {/* نقاط پایین اسلایدر */}
-      <div className="flex justify-center mt-6 gap-3 rtl:flex-row-reverse">
+      <div className="flex justify-center mt-10 gap-x-2 rtl:flex-row-reverse">
         {[...Array(dotCount)].map((_, idx) => (
           <button
             key={idx}
