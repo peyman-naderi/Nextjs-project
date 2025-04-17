@@ -13,9 +13,8 @@ export default function Home() {
           <SearchBox />
           <StatCards />
         </div>
-
-        <div className="lg:mx-10">
           <SliderCards />
+        <div className="mx-4">
           <Productcart />
         </div> 
           

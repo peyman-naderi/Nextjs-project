@@ -3,7 +3,7 @@ import { ChevronLeft } from "lucide-react"
 
 export default function Productcart () {
     return(
-        <div className=" justify-center mt-12  px-2 md:px-10">
+        <div className=" justify-center mt-12  px-1 md:px-10">
 <div className="flex items-center justify-between flex-wrap gap-y-4">
   {/* متن سمت راست */}
   <div className="text-right max-w-full">

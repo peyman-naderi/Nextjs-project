@@ -16,6 +16,8 @@ const steps = [
   { title: 'گام ۸', img: '/p2.png' },
   { title: 'گام ۹', img: '/p3.png' },
   { title: 'گام ۱۰', img: '/p4.png' },
+  { title: 'گام ۱۱', img: '/p1.png' },
+  { title: 'گام ۱۲', img: '/p2.png' },
 ]
 
 export default function SliderCards() {
@@ -30,13 +32,27 @@ export default function SliderCards() {
       spacing: 6,
     },
     breakpoints: {
+      '(min-width: 424px) and (max-width: 639px)': {
+        slides: { perView: 3, spacing: 4 },
+      },
       '(min-width: 640px)': {
         slides: { perView: 4, spacing: 4 },
       },
       '(min-width: 1024px)': {
         slides: { perView: 6, spacing: 0 },
       },
-
+      '(min-width: 1440px)': {
+        slides: { perView: 7, spacing: 0 },
+      },
+      '(min-width: 1620px)': {
+        slides: { perView: 8, spacing: 0 },
+      },
+      '(min-width: 1830px)': {
+        slides: { perView: 9, spacing: 0 },
+      },
+      '(min-width: 2100px)': {
+        slides: { perView: 11, spacing: 30 },
+      },
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel)
