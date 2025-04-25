@@ -11,6 +11,9 @@ module.exports = {
       fontFamily: {
         vazirmatn: ["Vazir", "sans-serif"],
       },
+      screens: {
+        'xs2': '424px',
+      },
     },
   },
   plugins: [],

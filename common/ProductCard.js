@@ -1,33 +1,40 @@
 import { User, Clock } from "lucide-react";
 import Image from "next/image";
 
-export default function Productcart({ imagsrc, titlebig, titlesmol, titlename, clock ,pris }) {
+export default function Productcart({ imagsrc, titlebig, titlesmol, titlename, clock, pris }) {
   return (
-    <div className="w-80 rounded-2xl mt-12 overflow-hidden shadow-lg border border-gray-200">
-      <div className="relative  w-full h-52">
+    <div className="w-full max-w-md mx-auto rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02] h-full flex flex-col justify-between">
+
+      {/* تصویر */}
+      <div className="relative w-full h-40 sm:h-48 md:h-56 lg:h-64 xl:h-72">
         <Image
           src={imagsrc}
-          alt="SQL Server Course"
+          alt={titlebig}
           layout="fill"
           objectFit="cover"
-          className="rounded-2xl"
+          className="rounded-t-2xl"
+          priority
         />
       </div>
-      <div className="p-3 space-y-3">
-        <h2 className="text-xl pt-2 font-bold">{titlebig}</h2>
-        <p className="text-lg text-gray-500">
-          {titlesmol}
-        </p>
-        <div className="flex pb-4 pt-1 items-center text-sm text-gray-600 gap-x-2 mt-2">
-          <User className="w-4 h-4" />
+
+      {/* محتوا */}
+      <div className="p-3 sm:p-4 md:p-5 flex flex-col justify-between flex-1">
+        <div className="space-y-2 sm:space-y-3">
+          <h2 className="text-base sm:text-lg md:text-xl font-bold">{titlebig}</h2>
+          <p className="text-sm sm:text-base text-gray-500">{titlesmol}</p>
+
+          <div className="flex items-center gap-x-2 text-gray-600 text-xs sm:text-sm md:text-base">
+            <User className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
             <span>{titlename}</span>
+          </div>
         </div>
-        <div className="flex border-t border-gray-300 justify-between items-center pt-5 pb-1">
-          <div className="flex items-center  text-green-600 text-lg gap-x-2">
-            <Clock className="w-4 h-4" />
+
+        <div className="flex justify-between items-center border-t pt-3 mt-4 text-sm sm:text-base">
+          <div className="flex items-center gap-x-1 text-green-600">
+            <Clock className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
             <span>{clock}</span>
           </div>
-          <span className="text-blue-600  text-lg">{pris} تومان</span>
+          <span className="text-blue-600 font-semibold">{pris} تومان</span>
         </div>
       </div>
     </div>
