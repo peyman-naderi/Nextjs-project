@@ -63,11 +63,11 @@ export default function Productcarts() {
       {/* Product Cards */}
       <div
         className="grid justify-between 
-          grid-cols-1 
-          xs2:grid-cols-2 
-          md:grid-cols-3 
-          lg:grid-cols-4 
-          gap-x-4 gap-y-6"
+        grid-cols-1 
+        xs2:grid-cols-2 
+        md:grid-cols-2 
+        lg:grid-cols-4 
+        gap-x-4 gap-y-6"
       >
         {courses.map((state, index) => {
           const hideCard = index === 3 ? "hide-between-md-lg" : "";
