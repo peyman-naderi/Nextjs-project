@@ -51,7 +51,7 @@ export default function SliderCards() {
         slides: { perView: 9, spacing: 0 },
       },
       "(min-width: 2100px)": {
-        slides: { perView: 11, spacing: 30 },
+        slides: { perView: 10, spacing: 25 },
       },
     },
     slideChanged(slider) {

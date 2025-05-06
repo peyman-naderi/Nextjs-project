@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function Productcart({ imagsrc, titlebig, titlesmol, titlename, clock, pris }) {
   return (
-    <div className="w-full  rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02] h-full flex flex-col justify-between">
+    <div className="w-full mx-auto rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02] h-full flex flex-col justify-between">
 
       {/* تصویر */}
-      <div className="relative w-full h-40 sm:h-48 md:h-56 lg:h-64 xl:h-72">
+      <div className="relative w-full h-40 sm:h-48 md:h-52 lg:h-60 xl:h-64">
         <Image
           src={imagsrc}
           alt={titlebig}

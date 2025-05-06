@@ -4,6 +4,7 @@ import SearchBox from "@/components/hero/SearchBox";
 import StatCards from "@/components/statcards/StatCards";
 import SliderCards from "@/components/slidercards/SliderCards";
 import Productcarts from "@/components/productscards/ProductCards";
+import Comment from "@/components/comment/Comment";
 export default function Home() {
   return (
     <div className="font-vazirmatn">
@@ -16,7 +17,8 @@ export default function Home() {
           <SliderCards />
         <div className="mx-4">
           <Productcarts />
-        </div> 
+      </div> 
+      <Comment />
           
     </div>
 
