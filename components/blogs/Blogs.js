@@ -1,39 +1,37 @@
-import Productcart from "@/common/ProductCard";
+"use client";
+import Blog from "@/common/Blog";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 
-const courses = [
+
+const bloges = [
   {
-    imagsrc: "/product1.png",
-    titlebig: "دوره آموزش SQL Server",
-    titlesmol: "یادگیری جامع SQL",
-    titlename: "علی احمدی",
-    clock: "۲۰:۳۸:۹",
-    pris: "۳۸۰",
+    imagsrcB: "/blog1.png",
+    titlebigB: "چرا یک سئو کار باید برنامه...",
+    titlesmolB: "همانطور که می دانید سئو یکی از مهم ترین عوامل موفقیت در کسب و کار های اینترنتی می باشد. امروزه شاهد بیزینس های...",
+    titlenameB: "علی احمدی",
+    eyeB: "1563",
   },
   {
-    imagsrc: "/product3.png",
-    titlebig: "دوره حرفه‌ای React",
-    titlesmol: "ساخت پروژه‌ با ری‌اکت",
-    titlename: "نگین رضایی",
-    clock: "۲۰:۳۸:۹",
-    pris: "۳۸۰",
+    imagsrcB: "/blog2.png",
+    titlebigB: "چگونه آموزش ببینیم؟",
+    titlesmolB: "همانطور که می دانید سئو یکی از مهم ترین عوامل موفقیت در کسب و کار های اینترنتی می باشد. امروزه شاهد بیزینس های...",
+    titlenameB: "نگین رضایی",
+    eyeB: "7856",
   },
   {
-    imagsrc: "/product2.png",
-    titlebig: "دوره پایتون",
-    titlesmol: "مناسب برای برنامه‌نویسان ",
-    titlename: "محمد کریمی",
-    clock: "۲۰:۳۸:۹",
-    pris: "۳۸۰",
+    imagsrcB: "/blog3.png",
+    titlebigB: "متلب چیست؟",
+    titlesmolB: "همانطور که می دانید سئو یکی از مهم ترین عوامل موفقیت در کسب و کار های اینترنتی می باشد. امروزه شاهد بیزینس های...",
+    titlenameB: "محمد کریمی",
+    eyeB: "1000",
   },
   {
-    imagsrc: "/product3.png",
-    titlebig: "دوره طراحی UI/UX",
-    titlesmol: "آشنایی با طراحی رابط کاربری ",
-    titlename: "سارا محمدی",
-    clock: "۲۰:۳۸:۹",
-    pris: "۳۸۰",
+    imagsrcB: "/blog1.png",
+    titlebigB: "متلب چیست؟",
+    titlesmolB: "همانطور که می دانید سئو یکی از مهم ترین عوامل موفقیت در کسب و کار های اینترنتی می باشد. امروزه شاهد بیزینس های...",
+    titlenameB: "سارا محمدی",
+    eyeB: "2654",
   },
 ];
 
@@ -70,20 +68,20 @@ export default function Productcarts() {
         gap-x-4 gap-y-6"
         mt
       >
-        {courses.map((state, index) => {
+        {bloges.map((state, index) => {
           const hideCard = index === 3 ? "hide-between-md-lg" : "";
           return (
             <div
               key={index}
               className={`keen-slider__slide flex justify-center ${hideCard}`}
             >
-              <Productcart
-                imagsrc={state.imagsrc}
-                titlebig={state.titlebig}
-                titlesmol={state.titlesmol}
-                titlename={state.titlename}
-                clock={state.clock}
-                pris={state.pris}
+              <Blog
+                imagsrcB={state.imagsrcB}
+                titlebigB={state.titlebigB}
+                titlesmolB={state.titlesmolB}
+                titlenameB={state.titlenameB}
+                eyeB={state.eyeB}
+                
               />
             </div>
           );

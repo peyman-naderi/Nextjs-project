@@ -30,7 +30,7 @@ export default function Productcart({ imagsrc, titlebig, titlesmol, titlename, c
         </div>
 
         <div className="flex justify-between items-center border-t pt-3 mt-4 text-sm sm:text-base">
-          <div className="flex items-center gap-x-1 text-green-600">
+          <div className="flex items-center gap-x-1 text-green-600 font-semibold">
             <Clock className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
             <span>{clock}</span>
           </div>

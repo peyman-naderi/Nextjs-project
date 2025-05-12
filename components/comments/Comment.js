@@ -16,7 +16,7 @@ const comments = [
     text: " این متن کمی طولانی‌تر است تا بررسی کنیم که آیا تراز عمودی در همه اسلایدها به درستی اعمال شده یا نه. باید همه کارت‌ها هم‌ارتفاع و مرتب باشند.",
     name: "سارا رضایی",
     role: "طراح رابط کاربری",
-    avatar: "/avatar1.png",
+    avatar: "/avatar2.png",
   },
   {
     text: "این متن کمی طولانی‌تر است تا بررسی کنیم که آیا تراز عمودی در همه اسلایدها به درستی اعمال شده یا نه. باید همه کارت‌ها هم‌ارتفاع و مرتب باشند.",
@@ -50,7 +50,7 @@ export default function Comment() {
 
 
   return (
-    <div className="w-full px-4 md:px-10 lg:px-6 mt-12">
+    <div className="w-full px-4 md:px-10 lg:px-6 mt-14">
       <h2 className="text-center text-2xl font-bold mb-6">
         نظرات کاربران <span className="text-blue-600">آروین لرن!</span>
       </h2>
