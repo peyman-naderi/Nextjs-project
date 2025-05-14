@@ -6,6 +6,7 @@ import SliderCards from "@/components/slidercards/SliderCards";
 import Productcarts from "@/components/productscards/ProductCards";
 import Comment from "@/components/comments/Comment";
 import Blogs from "@/components/blogs/Blogs";
+import Footer from "@/components/footer/Footer";
 export default function Home() {
   return (
     <div className="font-vazirmatn">
@@ -23,6 +24,7 @@ export default function Home() {
       <div className="mx-4">
         <Blogs />
       </div>
+      <Footer />
     </div>
   );
 }
