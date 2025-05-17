@@ -20,7 +20,7 @@ export default function Productcart({ imagsrc, titlebig, titlesmol, titlename, c
       {/* محتوا */}
       <div className="p-3 sm:p-4 md:p-5 flex flex-col justify-between flex-1">
         <div className="space-y-2 sm:space-y-3">
-          <h2 className="text-base sm:text-lg md:text-xl font-bold">{titlebig}</h2>
+          <h2 className="text-base sm:text-lg md:text-xl text-black font-bold">{titlebig}</h2>
           <p className="text-sm sm:text-base text-gray-500">{titlesmol}</p>
 
           <div className="flex items-center gap-x-2 text-gray-600 text-xs sm:text-sm md:text-base">

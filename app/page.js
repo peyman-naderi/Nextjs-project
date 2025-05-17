@@ -16,15 +16,17 @@ export default function Home() {
         <SearchBox />
         <StatCards />
       </div>
-      <SliderCards />
-      <div className="mx-4">
-        <Productcarts />
+      <div className="backgrunds">
+        <SliderCards />
+        <div className="mx-4 backgrunds">
+          <Productcarts />
+        </div>
+        <Comment />
+        <div className="mx-4 backgrunds">
+          <Blogs />
+        </div>
+        <Footer />
       </div>
-      <Comment />
-      <div className="mx-4">
-        <Blogs />
-      </div>
-      <Footer />
     </div>
   );
 }

@@ -67,7 +67,7 @@ export default function SliderCards() {
 
   return (
     <div className="w-full px-2 md:px-10 lg:px-6 mt-12 ">
-      <h2 className="text-center text-2xl font-bold mb-6">
+      <h2 className="text-center text-black text-2xl font-bold mb-6">
         می‌خوام <span className="text-blue-600">وردپرس</span> کار حرفه‌ای بشم!
       </h2>
       <p className="text-center text-gray-600 mb-8">

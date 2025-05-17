@@ -41,7 +41,7 @@ export default function Productcarts() {
       {/* Header */}
       <div className="flex items-center justify-between flex-wrap gap-y-4 mb-4">
         <div className="text-right max-w-full">
-          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-normal">
+          <h1 className="text-lg sm:text-xl text-black md:text-2xl lg:text-3xl font-bold leading-tight tracking-normal">
             آخرین مقالات و اخبار آروین لرن
           </h1>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-900 font-medium mt-3 leading-relaxed tracking-normal">

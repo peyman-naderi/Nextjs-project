@@ -37,7 +37,7 @@ export default function Footer() {
             height={140}
             className="mb-4"
           />
-          <p className="text-justify leading-loose text-gray-700 text-lg font-medium">
+          <p className="text-justify leading-loose text-gray-700 text-base lg:text-lg font-medium">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
             استفاده از طراحان گرافیک است.
           </p>
@@ -46,7 +46,7 @@ export default function Footer() {
         {/* Quick Access */}
         <div>
           <h3 className="font-bold text-2xl mb-4 text-gray-900">دسترسی سریع</h3>
-          <ul className="space-y-2 text-lg font-medium text-gray-700">
+          <ul className="space-y-2 text-base lg:text-lg font-medium text-gray-700">
             <li className="hover:text-blue-600 cursor-pointer">صفحه نخست</li>
             <li className="hover:text-blue-600 cursor-pointer">دوره‌ها</li>
             <li className="hover:text-blue-600 cursor-pointer">
@@ -61,7 +61,7 @@ export default function Footer() {
           <h3 className="font-bold text-2xl mb-4 text-gray-900">
             دسته‌بندی دوره‌ها
           </h3>
-          <ul className="space-y-2 text-lg font-medium text-gray-700">
+          <ul className="space-y-2 text-base lg:text-lg font-medium text-gray-700">
             <li className="hover:text-blue-600 cursor-pointer">اندروید</li>
             <li className="hover:text-blue-600 cursor-pointer">وردپرس</li>
             <li className="hover:text-blue-600 cursor-pointer">وب‌سایت</li>

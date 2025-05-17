@@ -46,3 +46,11 @@ body {
     border-bottom-right-radius: 40% 15px;
   }
 
+    .backgrunds {
+    background-image:url("/bgorigin.png");
+
+    height: auto; /* ارتفاع به اندازه محتوا */
+    color: white;
+
+  }
+

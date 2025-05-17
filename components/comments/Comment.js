@@ -51,7 +51,7 @@ export default function Comment() {
 
   return (
     <div className="w-full px-4 md:px-10 lg:px-6 mt-14">
-      <h2 className="text-center text-2xl font-bold mb-6">
+      <h2 className="text-center text-2xl font-bold mb-6 text-black">
         نظرات کاربران <span className="text-blue-600">آروین لرن!</span>
       </h2>
       <p className="text-center text-gray-600 mb-8">
@@ -59,7 +59,7 @@ export default function Comment() {
         از طراحان گرافیک است.
       </p>
 
-      <div ref={sliderRef} className="keen-slider mt-10">
+      <div ref={sliderRef} className="keen-slider bg-white mt-10">
         {comments.map((comment, index) => (
           <div key={index} className="keen-slider__slide shadow-xl px-4 border-2 rounded-2xl flex h-full">
             <div className="bg-gray-50/30  rounded-2xl p-6 w-full flex flex-col  h-full min-h-[300px]">
@@ -83,7 +83,7 @@ export default function Comment() {
                     className="rounded-xl object-cover"
                   />
                   <div className="text-right">
-                    <h3 className="font-bold text-lg">{comment.name}</h3>
+                    <h3 className="font-bold text-lg text-black">{comment.name}</h3>
                     <p className="text-gray-600 text-sm">{comment.role}</p>
                   </div>
                 </div>
