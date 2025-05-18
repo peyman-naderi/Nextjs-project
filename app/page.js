@@ -1,12 +1,12 @@
-import Header from "@/components/header/Header";
-import HeroText from "@/components/hero/HeroText";
-import SearchBox from "@/components/hero/SearchBox";
-import StatCards from "@/components/statcards/StatCards";
-import SliderCards from "@/components/slidercards/SliderCards";
-import Productcarts from "@/components/productscards/ProductCards";
-import Comment from "@/components/comments/Comment";
-import Blogs from "@/components/blogs/Blogs";
-import Footer from "@/components/footer/Footer";
+import Header from "@/components/Home/header/Header";
+import HeroText from "@/components/Home/hero/HeroText";
+import SearchBox from "@/components/Home/hero/SearchBox";
+import StatCards from "@/components/Home/statcards/StatCards";
+import SliderCards from "@/components/Home/slidercards/SliderCards";
+import Productcarts from "@/components/Home/productscards/ProductCards";
+import Comment from "@/components/Home/comments/Comment";
+import Blogs from "@/components/Home/blogsCards/Blogs";
+import Footer from "@/components/Home/footer/Footer";
 export default function Home() {
   return (
     <div className="font-vazirmatn">

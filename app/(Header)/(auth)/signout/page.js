@@ -1,9 +1,9 @@
-import SignOutButton from "@/components/header/auth/Signout"
+import SignOutButton from "@/components/Home/header/auth/Signout";
 
 export default function signOutpages() {
-    return(
-        <div>
-            <SignOutButton />
-        </div>
-    )
+  return (
+    <div>
+      <SignOutButton />
+    </div>
+  );
 }

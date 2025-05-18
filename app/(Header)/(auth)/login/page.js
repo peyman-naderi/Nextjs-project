@@ -1,9 +1,9 @@
-import LoginPage from "@/components/header/auth/Login"
+import LoginPage from "@/components/Home/header/auth/Login";
 
 export default function loginpages() {
-    return(
-        <div>
-            <LoginPage />
-        </div>
-    )
+  return (
+    <div>
+      <LoginPage />
+    </div>
+  );
 }

@@ -1,8 +1,5 @@
-
-import Searchicon from "@/components/header/search/Search"
+import Searchicon from "@/components/Home/header/search/Search";
 
 export default function searchpage() {
-    return(
-        <Searchicon />
-    )
+  return <Searchicon />;
 }
