@@ -33,9 +33,9 @@ import { useSession} from "next-auth/react";
                             <ShopHeader />
                             {session ? (
                             <div className="hidden lg:flex pr-3 items-center gap-x-2">
-                                <span className="text-xl items-center text-gray-300">سلام، {session.user.name}</span>
+                                <span className="text-xl items-center text-white">سلام، {session.user.name}</span>
                                 <Link href="/signout">
-                                    <LogOut className="text-gray-300"/>
+                                    <LogOut className="text-white"/>
                                 </Link>
                             </div>
                             ) : (

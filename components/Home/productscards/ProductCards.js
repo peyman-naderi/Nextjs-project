@@ -52,7 +52,7 @@ export default function Productcarts() {
           </p>
         </div>
 
-        <Link href="/ProductsPage" passHref>
+        <Link href="/productspage" passHref>
           <div className="flex items-center gap-x-2 text-sm sm:text-base md:text-lg px-5 py-2 rounded-3xl bg-blue-600 hover:bg-blue-700 text-white border border-blue-600 cursor-pointer transition-all duration-200 whitespace-nowrap">
             آرشیو تمامی دوره ها
             <ChevronLeft />
