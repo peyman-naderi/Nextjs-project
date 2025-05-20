@@ -52,9 +52,9 @@ export default function Comment() {
   return (
     <div className="w-full px-4 md:px-10 lg:px-6 mt-14">
       <h2 className="text-center text-2xl font-bold mb-6 text-black">
-        نظرات کاربران <span className="text-blue-600">آروین لرن!</span>
+        نظرات کاربران <span className="text-blue-600 bg-white">آروین لرن!</span>
       </h2>
-      <p className="text-center text-gray-600 mb-8">
+      <p className="text-center text-gray-600 bg-white mb-8">
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
         از طراحان گرافیک است.
       </p>

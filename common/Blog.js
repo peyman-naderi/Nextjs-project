@@ -19,7 +19,7 @@ export default function Blog({ imagsrcB, titlebigB, titlesmolB, titlenameB ,eyeB
       {/* محتوا */}
       <div className="p-3 sm:p-4 md:p-5 flex flex-col justify-between flex-1">
         <div className="space-y-2 sm:space-y-3">
-          <h2 className="text-base text-black sm:text-lg md:text-xl font-bold">
+          <h2 className="text-base  text-black sm:text-lg md:text-xl font-bold">
             {titlebigB}
           </h2>
           <p className="text-sm sm:text-base text-gray-500">{titlesmolB}</p>
