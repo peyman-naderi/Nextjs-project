@@ -10,10 +10,10 @@ export default function ProductsPage() {
         <Header />
       </div>
       <SearchAndSort />
-      <div className="flex mx-auto justify-center ">
+      <div className="mx-32">
         <ProducCategories />
       </div>
-      <div className="rounded-t-3xl bottom-0">
+      <div className="rounded-t-3xl">
         <Footer />
       </div>
     </>

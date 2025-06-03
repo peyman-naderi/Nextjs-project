@@ -168,7 +168,7 @@ export default function ProducCategories() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row gap-8 px-4 mt-10 max-w-full">
+    <div className=" flex flex-col lg:flex-row gap-8 px-4 mt-10 max-w-full">
 
 
       {/* Product list & pagination */}
