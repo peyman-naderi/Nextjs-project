@@ -10,7 +10,7 @@ export default function ProductsPage() {
         <Header />
       </div>
       <SearchAndSort />
-      <div className="mx-32">
+      <div className="xl:mx-32">
         <ProducCategories />
       </div>
       <div className="rounded-t-3xl">

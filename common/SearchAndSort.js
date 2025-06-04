@@ -14,13 +14,13 @@ export default function SearchAndSort() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex flex-col  md:flex-row gap-4 md:gap-x-14 w-full max-w-7xl mx-auto mt-6">
+    <div className="flex flex-col  md:flex-row gap-4 px-5  md:gap-x-14 xl:w-5/6 justify-center mx-auto mt-6">
       {/* Search Box */}
       <div className="w-full md:w-1/2  relative">
         <input
           type="text"
           placeholder="عنوان آموزش مورد نظر خود را بنویسید..."
-          className="w-full text-right px-14 py-3 bg-white rounded-2xl shadow-md border border-gray-200 text-base"
+          className="w-full text-right px-10 py-3 bg-white rounded-2xl shadow-md border border-gray-200 text-xs md:text-base "
         />
         <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
       </div>
@@ -29,7 +29,7 @@ export default function SearchAndSort() {
       <div className="relative w-full md:w-1/2">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-full text-right px-5 py-3 bg-white rounded-2xl shadow-md border border-gray-200 text-base flex justify-between items-center"
+          className="w-full text-right px-5 py-3 bg-white rounded-2xl shadow-md border border-gray-200 text-xs md:text-base flex justify-between items-center"
         >
           {selectedSort}
           <ChevronDown className="w-5 h-5 text-gray-500" />

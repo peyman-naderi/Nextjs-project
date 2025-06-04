@@ -13,6 +13,7 @@ module.exports = {
       },
       screens: {
         'xs2': '424px',
+        'xs3': '2000px'
       },
     },
   },

@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import Productcart from "@/common/ProductCard";
 
 const courses = [
@@ -85,6 +85,7 @@ const courses = [
     pris: "۳۲۰",
   },
 ];
+
 const categories = [
   {
     title: "دسته بندی دوره ها",
@@ -96,12 +97,7 @@ const categories = [
   },
   {
     title: "برنامه نویسی موبایل",
-    options: [
-      "اندروید (جاوا)",
-      "اندروید (کاتلین)",
-      "فلاتر و دارت",
-      "ری‌اکت نیتیو",
-    ],
+    options: ["اندروید (کاتلین)", "فلاتر و دارت", "ری‌اکت نیتیو"],
   },
   {
     title: "برنامه نویسی وب",
@@ -121,15 +117,30 @@ const categories = [
     ],
   },
   {
-    title: "فریم ورک ها",
+    title: "برنامه نویسی موبایل",
     options: [
-      "ری‌اکت",
-      "ویو جی‌اس",
-      "انگولار",
-      "لاراول",
-      "نکست جی‌اس",
-      "فلسک",
-      "نست‌جی‌اس",
+      "اندروید (جاوا)",
+      "اندروید (کاتلین)",
+      "فلاتر و دارت",
+      "ری‌اکت نیتیو",
+    ],
+  },
+  {
+    title: "وردپرس",
+    options: ["برنامه نویسی افزونه", "طراحی قالب"],
+  },
+  {
+    title: "فریم ورک ها",
+    options: ["ری‌اکت", "ویو جی‌اس", "انگولار", "لاراول", "فلسک", "نست‌جی‌اس"],
+  },
+  {
+    title: "برنامه نویسی لینوکس",
+    options: [
+      "اندروید (جاوا)",
+      "اندروید (کاتلین)",
+      "فلاتر و دارت",
+      "ری‌اکت نیتیو",
+      "ری‌اکت ",
     ],
   },
 ];
@@ -145,6 +156,7 @@ export default function ProducCategories() {
   const nextPage = () => {
     if (currentPage < totalPages) setCurrentPage((prev) => prev + 1);
   };
+
   const prevPage = () => {
     if (currentPage > 1) setCurrentPage((prev) => prev - 1);
   };
@@ -168,87 +180,87 @@ export default function ProducCategories() {
   };
 
   return (
-    <div className=" flex flex-col lg:flex-row gap-8 px-4 mt-10 max-w-full">
+    <section className="w-full  mt-10 px-2 sm:px-4">
+      <div className=" mx-auto   flex flex-col xs3:mx-20 lg:flex-row  lg:gap-5">
+        {/* Product Grid + Pagination */}
 
-
-      {/* Product list & pagination */}
-      <div className="flex-1 flex flex-col">
-        {/* Cards */}
-        <div
-          className="grid grid-cols-1 
-          sm:grid-cols-2 
-          lg:grid-cols-3 
-          gap-x-8 gap-y-6"
-        >
-          {currentCourses.map((state, index) => (
-            <div key={index} className="flex justify-center">
-              <Productcart
-                imagsrc={state.imagsrc}
-                titlebig={state.titlebig}
-                titlesmol={state.titlesmol}
-                titlename={state.titlename}
-                clock={state.clock}
-                pris={state.pris}
-              />
-            </div>
-          ))}
-        </div>
-
-        {/* Pagination */}
-        <div className="flex justify-center mt-8 gap-4">
-          <button
-            onClick={prevPage}
-            disabled={currentPage === 1}
-            className={`px-4 py-2 text-white rounded-md ${
-              currentPage === 1
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-blue-600 hover:bg-blue-700"
-            }`}
+        <main className="flex-1 flex flex-col  ">
+          {/* Product Grid */}
+          <div
+            className="grid justify-center
+        grid-cols-1 
+        xs2:grid-cols-2 
+        md:grid-cols-3 
+        lg:grid-cols-3 
+        gap-x-2 mx-3 md:mx-0  gap-y-4"
+            mt
           >
-            قبلی
-          </button>
-          <span className="px-3 py-2 bg-gray-100 rounded-md">
-            صفحه {currentPage}
-          </span>
-          <button
-            onClick={nextPage}
-            disabled={currentPage === totalPages}
-            className={`px-4 py-2 rounded-md text-white ${
-              currentPage === totalPages
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-blue-600 hover:bg-blue-700"
-            }`}
-          >
-            بعدی
-          </button>
-        </div>
-      </div>
-
-      {/* Sidebar ثابت و چسبیده */}
-    <div className="w-full lg:w-72 p-4 inset-shadow-2xs border rounded-3xl bg-white shadow-md text-right ">
-      {categories.map((category, idx) => (
-        <div key={idx} className="mb-4 ">
-          <p className="font-bold mb-2">{category.title}</p>
-          <div className="flex flex-col gap-2">
-            {category.options.map((label) => (
-              <label
-                key={label}
-                className="flex items-center justify-between"
-              >
-                <span className="pr-5 mt-1">{label}</span>
-                <input
-                  type="checkbox"
-                  checked={checkedItems[label] || false}
-                  onChange={() => handleChange(label)}
-                  className="w-4 h-4"
-                />
-              </label>
+            {currentCourses.map((course, index) => (
+              <div key={index} className="flex justify-center items-center">
+                <Productcart {...course} />
+              </div>
             ))}
           </div>
-        </div>
-      ))}
-    </div>
 
-    </div>
+          {/* Pagination */}
+          <div className="flex justify-center items-center mt-8 gap-3 flex-wrap">
+            <button
+              onClick={prevPage}
+              disabled={currentPage === 1}
+              className={`px-4 py-2 rounded-md text-sm ${
+                currentPage === 1
+                  ? "bg-gray-300 text-gray-600 cursor-not-allowed"
+                  : "bg-blue-600 text-white hover:bg-blue-700"
+              }`}
+            >
+              قبلی
+            </button>
+
+            <span className="px-3 py-1.5 text-sm bg-white border rounded-md text-gray-700 shadow">
+              صفحه {currentPage}
+            </span>
+
+            <button
+              onClick={nextPage}
+              disabled={currentPage === totalPages}
+              className={`px-4 py-2 rounded-md text-sm ${
+                currentPage === totalPages
+                  ? "bg-gray-300 text-gray-600 cursor-not-allowed"
+                  : "bg-blue-600 text-white hover:bg-blue-700"
+              }`}
+            >
+              بعدی
+            </button>
+          </div>
+        </main>
+
+        {/* Sidebar */}
+        <aside className="hidden lg:block w-full lg:w-72 bg-white rounded-xl shadow p-4 border">
+          {categories.map((category, idx) => (
+            <div key={idx} className="mb-5">
+              <p className="text-base font-semibold text-gray-800 mb-2">
+                {category.title}
+              </p>
+              <div className="space-y-2">
+                {category.options.map((label) => (
+                  <label
+                    key={label}
+                    className="flex items-center justify-between text-sm text-gray-700"
+                  >
+                    <span className="pr-2">{label}</span>
+                    <input
+                      type="checkbox"
+                      checked={checkedItems[label] || false}
+                      onChange={() => handleChange(label)}
+                      className="w-4 h-4 text-blue-600 border-gray-300 rounded"
+                    />
+                  </label>
+                ))}
+              </div>
+            </div>
+          ))}
+        </aside>
+      </div>
+    </section>
   );
 }
