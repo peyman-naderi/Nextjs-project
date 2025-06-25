@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Productcart from "@/common/ProductCard";
+import Productcart from "@/components/common/ProductCard";
 
 const courses = [
   {

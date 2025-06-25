@@ -1,10 +1,28 @@
-import StatCard from "@/common/StatCard";
+import StatCard from "@/components/common/StatCard";
 
 export default function StatCards() {
   const stats = [
-    { number: "۱۶۵,۷۹۰", label: "نفر دانشجو", imageSrc: "/photo1.png", width:44, height: 50 },
-    { number: "۳۲,۲۰۰", label: "بازدید روزانه", imageSrc: "/photo2.png", width: 100, height: 70 },
-    { number: "۱۸,۸۹۰", label: "دقیقه آموزش", imageSrc: "/photo3.png", width: 71, height: 70 },
+    {
+      number: "۱۶۵,۷۹۰",
+      label: "نفر دانشجو",
+      imageSrc: "/photo1.png",
+      width: 44,
+      height: 50,
+    },
+    {
+      number: "۳۲,۲۰۰",
+      label: "بازدید روزانه",
+      imageSrc: "/photo2.png",
+      width: 100,
+      height: 70,
+    },
+    {
+      number: "۱۸,۸۹۰",
+      label: "دقیقه آموزش",
+      imageSrc: "/photo3.png",
+      width: 71,
+      height: 70,
+    },
   ];
 
   return (

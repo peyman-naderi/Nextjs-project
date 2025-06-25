@@ -1,4 +1,4 @@
-import Productcart from "@/common/ProductCard";
+import Productcart from "@/components/common/ProductCard";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 

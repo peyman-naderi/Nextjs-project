@@ -1,6 +1,6 @@
 import Header from "@/components/Home/header/Header";
 import Footer from "@/components/Home/footer/Footer";
-import SearchAndSort from "@/common/SearchAndSort";
+import SearchAndSort from "@/components/common/SearchAndSort";
 import ProducCategories from "./Product‌Categories";
 
 export default function ProductsPage() {
@@ -11,7 +11,6 @@ export default function ProductsPage() {
       </div>
       <SearchAndSort />
       <div className="backgrunds">
-        
         <div className=" xl:mx-32">
           <ProducCategories />
         </div>

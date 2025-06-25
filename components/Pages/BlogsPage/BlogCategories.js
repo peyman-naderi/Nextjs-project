@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Productcart from "@/common/ProductCard";
+import Productcart from "@/components/common/ProductCard";
 
 const courses = [
   {
@@ -83,8 +83,8 @@ const courses = [
     titlename: "کیانا محمدی",
     clock: "۱۰:۴۵:۰۰",
     pris: "۳۲۰",
-    },
-    {
+  },
+  {
     imagsrc: "/product3.png",
     titlebig: "دوره گراف‌کیوال",
     titlesmol: "آشنایی با GraphQL",
@@ -92,7 +92,7 @@ const courses = [
     clock: "۱۰:۴۵:۰۰",
     pris: "۳۲۰",
   },
-    {
+  {
     imagsrc: "/product2.png",
     titlebig: "دوره گراف‌کیوال",
     titlesmol: "آشنایی با GraphQL",
@@ -100,7 +100,7 @@ const courses = [
     clock: "۱۰:۴۵:۰۰",
     pris: "۳۲۰",
   },
-    {
+  {
     imagsrc: "/product1.png",
     titlebig: "دوره گراف‌کیوال",
     titlesmol: "آشنایی با GraphQL",
@@ -108,7 +108,7 @@ const courses = [
     clock: "۱۰:۴۵:۰۰",
     pris: "۳۲۰",
   },
-    {
+  {
     imagsrc: "/product3.png",
     titlebig: "دوره گراف‌کیوال",
     titlesmol: "آشنایی با GraphQL",
@@ -116,7 +116,7 @@ const courses = [
     clock: "۱۰:۴۵:۰۰",
     pris: "۳۲۰",
   },
-    {
+  {
     imagsrc: "/product2.png",
     titlebig: "دوره گراف‌کیوال",
     titlesmol: "آشنایی با GraphQL",
@@ -125,7 +125,6 @@ const courses = [
     pris: "۳۲۰",
   },
 ];
-
 
 export default function BlogCategories() {
   const [currentPage, setCurrentPage] = useState(1);

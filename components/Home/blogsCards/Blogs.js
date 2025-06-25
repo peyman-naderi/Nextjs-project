@@ -1,35 +1,38 @@
 "use client";
-import Blog from "@/common/Blog";
+import Blog from "@/components/common/Blog";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
-
 
 const bloges = [
   {
     imagsrcB: "/blog1.png",
     titlebigB: "چرا یک سئو کار باید برنامه...",
-    titlesmolB: "همانطور که می دانید سئو یکی از مهم ترین عوامل موفقیت در کسب و کار های اینترنتی می باشد. امروزه شاهد بیزینس های...",
+    titlesmolB:
+      "همانطور که می دانید سئو یکی از مهم ترین عوامل موفقیت در کسب و کار های اینترنتی می باشد. امروزه شاهد بیزینس های...",
     titlenameB: "علی احمدی",
     eyeB: "1563",
   },
   {
     imagsrcB: "/blog2.png",
     titlebigB: "چگونه آموزش ببینیم؟",
-    titlesmolB: "همانطور که می دانید سئو یکی از مهم ترین عوامل موفقیت در کسب و کار های اینترنتی می باشد. امروزه شاهد بیزینس های...",
+    titlesmolB:
+      "همانطور که می دانید سئو یکی از مهم ترین عوامل موفقیت در کسب و کار های اینترنتی می باشد. امروزه شاهد بیزینس های...",
     titlenameB: "نگین رضایی",
     eyeB: "7856",
   },
   {
     imagsrcB: "/blog3.png",
     titlebigB: "متلب چیست؟",
-    titlesmolB: "همانطور که می دانید سئو یکی از مهم ترین عوامل موفقیت در کسب و کار های اینترنتی می باشد. امروزه شاهد بیزینس های...",
+    titlesmolB:
+      "همانطور که می دانید سئو یکی از مهم ترین عوامل موفقیت در کسب و کار های اینترنتی می باشد. امروزه شاهد بیزینس های...",
     titlenameB: "محمد کریمی",
     eyeB: "1000",
   },
   {
     imagsrcB: "/blog1.png",
     titlebigB: "متلب چیست؟",
-    titlesmolB: "همانطور که می دانید سئو یکی از مهم ترین عوامل موفقیت در کسب و کار های اینترنتی می باشد. امروزه شاهد بیزینس های...",
+    titlesmolB:
+      "همانطور که می دانید سئو یکی از مهم ترین عوامل موفقیت در کسب و کار های اینترنتی می باشد. امروزه شاهد بیزینس های...",
     titlenameB: "سارا محمدی",
     eyeB: "2654",
   },
@@ -81,7 +84,6 @@ export default function Productcarts() {
                 titlesmolB={state.titlesmolB}
                 titlenameB={state.titlenameB}
                 eyeB={state.eyeB}
-                
               />
             </div>
           );

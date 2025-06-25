@@ -2,7 +2,7 @@
 
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import SliderCard from "@/common/SliderCard";
+import SliderCard from "@/components/common/SliderCard";
 import { useState } from "react";
 
 const steps = [
