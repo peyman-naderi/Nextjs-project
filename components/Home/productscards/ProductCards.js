@@ -2,40 +2,40 @@ import Productcart from "@/components/common/ProductCard";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 
-const courses = [
-  {
-    imagsrc: "/product1.png",
-    titlebig: "دوره آموزش SQL Server",
-    titlesmol: "یادگیری جامع SQL",
-    titlename: "علی احمدی",
-    clock: "۲۰:۳۸:۹",
-    pris: "۳۸۰",
-  },
-  {
-    imagsrc: "/product3.png",
-    titlebig: "دوره حرفه‌ای React",
-    titlesmol: "ساخت پروژه‌ با ری‌اکت",
-    titlename: "نگین رضایی",
-    clock: "۲۰:۳۸:۹",
-    pris: "۳۸۰",
-  },
-  {
-    imagsrc: "/product2.png",
-    titlebig: "دوره پایتون",
-    titlesmol: "مناسب برای برنامه‌نویسان ",
-    titlename: "محمد کریمی",
-    clock: "۲۰:۳۸:۹",
-    pris: "۳۸۰",
-  },
-  {
-    imagsrc: "/product3.png",
-    titlebig: "دوره طراحی UI/UX",
-    titlesmol: "آشنایی با طراحی رابط کاربری ",
-    titlename: "سارا محمدی",
-    clock: "۲۰:۳۸:۹",
-    pris: "۳۸۰",
-  },
-];
+// const courses = [
+//   {
+//     imagsrc: "/product1.png",
+//     titlebig: "دوره آموزش SQL Server",
+//     titlesmol: "یادگیری جامع SQL",
+//     titlename: "علی احمدی",
+//     clock: "۲۰:۳۸:۹",
+//     pris: "۳۸۰",
+//   },
+//   {
+//     imagsrc: "/product3.png",
+//     titlebig: "دوره حرفه‌ای React",
+//     titlesmol: "ساخت پروژه‌ با ری‌اکت",
+//     titlename: "نگین رضایی",
+//     clock: "۲۰:۳۸:۹",
+//     pris: "۳۸۰",
+//   },
+//   {
+//     imagsrc: "/product2.png",
+//     titlebig: "دوره پایتون",
+//     titlesmol: "مناسب برای برنامه‌نویسان ",
+//     titlename: "محمد کریمی",
+//     clock: "۲۰:۳۸:۹",
+//     pris: "۳۸۰",
+//   },
+//   {
+//     imagsrc: "/product3.png",
+//     titlebig: "دوره طراحی UI/UX",
+//     titlesmol: "آشنایی با طراحی رابط کاربری ",
+//     titlename: "سارا محمدی",
+//     clock: "۲۰:۳۸:۹",
+//     pris: "۳۸۰",
+//   },
+// ];
 
 export default function Productcarts() {
   return (
