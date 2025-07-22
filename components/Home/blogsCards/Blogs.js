@@ -45,7 +45,7 @@ export default function Productcarts() {
       <div className="flex items-center justify-between flex-wrap gap-y-4 mb-4">
         <div className="text-right max-w-full">
           <h1 className="text-lg sm:text-xl bg-white text-black md:text-2xl lg:text-3xl font-bold leading-tight tracking-normal">
-            آخرین مقالات و اخبار آروین لرن
+            آخرین مقالات و اخبار پیمان لرن
           </h1>
           <p className="text-sm bg-white sm:text-base md:text-lg lg:text-xl text-gray-900 font-medium mt-3 leading-relaxed tracking-normal">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با

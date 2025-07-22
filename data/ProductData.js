@@ -92,8 +92,10 @@ const ProductData = [
   },
 ];
 
-export default function getProductData(id) {
+function getProductData(id) {
   let productDat = ProductData.find((item) => item.id === id);
 
   return productDat;
 }
+
+export { ProductData, getProductData };

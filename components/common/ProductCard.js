@@ -28,16 +28,18 @@ export default function Productcart({ product }) {
 
           <div className="flex items-center gap-x-2 text-gray-600 text-xs sm:text-sm md:text-base">
             <User className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
-            <span>{titlename}</span>
+            <span>{product.titlename}</span>
           </div>
         </div>
 
         <div className="flex justify-between items-center border-t pt-3 mt-4 text-sm sm:text-base">
           <div className="flex items-center gap-x-1 text-green-600 font-semibold">
             <Clock className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
-            <span>{clock}</span>
+            <span>{product.clock}</span>
           </div>
-          <span className="text-blue-600 font-semibold">{pris} تومان</span>
+          <span className="text-blue-600 font-semibold">
+            {product.pris} تومان
+          </span>
         </div>
       </div>
     </div>
