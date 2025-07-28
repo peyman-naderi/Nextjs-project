@@ -7,26 +7,30 @@ import Productcarts from "@/components/Home/productscards/ProductCards";
 import Comment from "@/components/Home/comments/Comment";
 import Blogs from "@/components/Home/blogsCards/Blogs";
 import Footer from "@/components/Home/footer/Footer";
+
+import { CartProvider } from "@/context/CartShop";
 export default function Home() {
   return (
-    <div className="font-vazirmatn">
-      <div className="backgrund">
-        <Header />
-        <HeroText />
-        <SearchBox />
-        <StatCards />
-      </div>
-      <div className="backgrunds">
-        <SliderCards />
-        <div className="mx-4 backgrunds">
-          <Productcarts />
+    <CartProvider>
+      <div className="font-vazirmatn">
+        <div className="backgrund">
+          <Header />
+          <HeroText />
+          <SearchBox />
+          <StatCards />
         </div>
-        <Comment />
-        <div className="mx-4 backgrunds">
-          <Blogs />
+        <div className="backgrunds">
+          <SliderCards />
+          <div className="mx-4 backgrunds">
+            <Productcarts />
+          </div>
+          <Comment />
+          <div className="mx-4 backgrunds">
+            <Blogs />
+          </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
-    </div>
+    </CartProvider>
   );
 }
