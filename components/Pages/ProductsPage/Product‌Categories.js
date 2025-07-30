@@ -96,12 +96,9 @@ export default function ProductCategories() {
       <div className="mx-auto flex flex-col xl:mx-2 xs3:mx-20 lg:flex-row lg:gap-5">
         <main className="flex-1 flex flex-col">
           <div className="grid justify-center grid-cols-1 xs2:grid-cols-2 md:grid-cols-3 gap-x-2 mx-3 md:mx-0 gap-y-4">
-            {currentCourses.map((ProductData) => (
-              <div
-                key={ProductData.id}
-                className="flex justify-center items-center"
-              >
-                <Productcart product={ProductData} />
+            {currentCourses.map((item, index) => (
+              <div key={index.id} className="flex justify-center items-center">
+                <Productcart product={item} />
               </div>
             ))}
           </div>

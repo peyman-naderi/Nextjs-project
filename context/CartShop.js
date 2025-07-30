@@ -12,7 +12,7 @@ export const CartContext = createContext({
   getTotlaAmount: () => {},
 });
 
-export function CartProvider({ Children }) {
+export function CartProvider({ children }) {
   // برای ذخیره کردن محصول در استیت
   const [cartProduct, setCartProduct] = useState([]);
 
@@ -34,9 +34,10 @@ export function CartProvider({ Children }) {
     if (quantity === 0) {
       setCartProduct([...cartProduct, { id: id, quantity: 1 }]);
     } else {
-      setCartProduct;
-      cartProduct.map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+      setCartProduct(
+        cartProduct.map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+        )
       );
     }
   }
@@ -44,7 +45,7 @@ export function CartProvider({ Children }) {
   // یک محصول خاص از صفحه خرید حذف شود
   function deleteFromCart(id) {
     setCartProduct((cartProducts) =>
-      cartProducts.filter(() => {
+      cartProducts.filter((item) => {
         return item.id != id;
       })
     );
@@ -72,6 +73,8 @@ export function CartProvider({ Children }) {
       const productData = getProductData(item.id);
       totalAmount += productData.pris * item.quantity;
     });
+
+    return totalAmount;
   }
 
   const ContextValue = {
@@ -84,6 +87,6 @@ export function CartProvider({ Children }) {
   };
 
   return (
-    <CartContext.Provider value={ContextValue}>{Children}</CartContext.Provider>
+    <CartContext.Provider value={ContextValue}>{children}</CartContext.Provider>
   );
 }

@@ -1,7 +1,12 @@
-import { User, Clock } from "lucide-react";
+"use client";
+import { User, Clock, ShoppingCart } from "lucide-react";
 import Image from "next/image";
-
+import { useContext } from "react";
+import { CartContext } from "@/context/CartShop";
 export default function Productcart({ product }) {
+  const cart = useContext(CartContext);
+  const productQuantity = cart.getProductQuantity(product.id);
+
   return (
     <div className="w-full mx-auto rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02] h-full flex flex-col justify-between">
       {/* تصویر */}
@@ -26,9 +31,20 @@ export default function Productcart({ product }) {
             {product.titlesmol}
           </p>
 
-          <div className="flex items-center gap-x-2 text-gray-600 text-xs sm:text-sm md:text-base">
-            <User className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
-            <span>{product.titlename}</span>
+          <div className="flex justify-between items-center">
+            <div className="flex items-center gap-x-2 text-gray-600 text-xs sm:text-sm md:text-base">
+              <User className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+              <span>{product.titlename}</span>
+            </div>
+            {productQuantity > 0 ? (
+              <div className="text-green-600 text-xs sm:text-sm md:text-base">
+                انجام شد
+              </div>
+            ) : (
+              <div onClick={() => cart.addItemToCart(product.id)}>
+                <ShoppingCart className="text-blue-600  w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+              </div>
+            )}
           </div>
         </div>
 

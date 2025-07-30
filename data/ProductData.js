@@ -2,7 +2,7 @@ const ProductData = [
   {
     id: "1",
     imagsrc: "/product1.png",
-    titlebig: "دوره آموزش SQL Server",
+    titlebig: "دوره  SQL Server",
     titlesmol: "یادگیری جامع SQL",
     titlename: "علی احمدی",
     clock: "۲۰:۳۸:۹",

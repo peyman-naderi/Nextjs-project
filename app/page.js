@@ -7,8 +7,8 @@ import Productcarts from "@/components/Home/productscards/ProductCards";
 import Comment from "@/components/Home/comments/Comment";
 import Blogs from "@/components/Home/blogsCards/Blogs";
 import Footer from "@/components/Home/footer/Footer";
-
 import { CartProvider } from "@/context/CartShop";
+
 export default function Home() {
   return (
     <CartProvider>
