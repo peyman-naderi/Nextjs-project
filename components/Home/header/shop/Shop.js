@@ -1,90 +1,59 @@
-'use client';
+"use client";
+import CardShop from "./ShopCard";
+import { useContext } from "react";
+import { CartContext } from "@/context/CartShop";
 
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
+export default function CartShopAll() {
+  const cart = useContext(CartContext);
 
-export default function CheckoutPage() {
-  const [cart, setCart] = useState([]);
-
-  useEffect(() => {
-    const storedCart = localStorage.getItem('cart');
-    if (storedCart) {
-      setCart(JSON.parse(storedCart));
-    }
-  }, []);
-
-  const updateQuantity = (id, quantity) => {
-    const updatedCart = cart.map((item) =>
-      item.id === id ? { ...item, quantity: item.quantity + quantity } : item
-    );
-    setCart(updatedCart);
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
-  };
-
-  const removeItem = (id) => {
-    const updatedCart = cart.filter((item) => item.id !== id);
-    setCart(updatedCart);
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
-  };
-
-  const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const productCount = cart.items.reduce(
+    (sum, Product) => sum + Product.quantity,
+    0
+  );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-red-100 px-6 py-10">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-extrabold text-center text-gray-800 mb-10">سبد خرید</h1>
-
-        {cart.length === 0 ? (
-          <p className="text-center text-gray-600">سبد خرید شما خالی است.</p>
+    <section className="max-w-7xl mx-auto px-4 py-10 flex gap-12">
+      {/* بخش کارت‌های محصول: */}
+      <div className="flex-1 flex flex-col ">
+        {productCount > 0 ? (
+          <>
+            <h2 className="text-2xl font-bold ">سبد خرید</h2>
+            {cart.items.map((item) => (
+              <CardShop key={item.id} id={item.id} quantity={item.quantity} />
+            ))}
+          </>
         ) : (
-          <div>
-            <div className="space-y-6">
-              {cart.map((item) => (
-                <div key={item.id} className="flex justify-between items-center bg-white p-4 rounded-xl shadow-md">
-                  <div className="flex items-center gap-4">
-                    <img src={item.image} alt={item.name} className="w-16 h-16 object-cover rounded-xl" />
-                    <div>
-                      <h2 className="text-lg font-bold text-gray-800">{item.name}</h2>
-                      <p className="text-gray-600">{item.price.toLocaleString()} تومان</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <button
-                      onClick={() => updateQuantity(item.id, -1)}
-                      disabled={item.quantity <= 1}
-                      className="px-3 py-1 bg-indigo-600 text-white rounded-full disabled:bg-gray-400"
-                    >
-                      -
-                    </button>
-                    <span>{item.quantity}</span>
-                    <button
-                      onClick={() => updateQuantity(item.id, 1)}
-                      className="px-3 py-1 bg-indigo-600 text-white rounded-full"
-                    >
-                      +
-                    </button>
-                    <button
-                      onClick={() => removeItem(item.id)}
-                      className="ml-4 text-red-500 hover:text-red-700"
-                    >
-                      حذف
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-10 text-center">
-              <p className="text-lg font-semibold text-gray-800 mb-4">مجموع: {total.toLocaleString()} تومان</p>
-              <Link href="/payment">
-                <button className="px-6 py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition">
-                  پرداخت
-                </button>
-              </Link>
-            </div>
-          </div>
+          <h3 className="text-3xl text-center mx-auto mt-10 font-bold text-blue-500">
+            سبد خرید خالی است🤔
+          </h3>
         )}
       </div>
-    </div>
+
+      {/* بخش خلاصه سفارش: */}
+      <aside className="w-96 bg-white rounded-2xl shadow-md border p-6 sticky top-20 self-start">
+        <h2 className="text-xl font-semibold mb-4 text-right border-b pb-2">
+          اطلاعات خرید
+        </h2>
+
+        <div className="space-y-4 text-gray-700 text-right">
+          <div className="flex justify-between text-base">
+            <span>جمع جزء</span>
+            <span>{/* اینجا می‌تونید مقدار جمع جزء رو بزارید */}</span>
+          </div>
+          <div className="flex justify-between text-base">
+            <span>مالیات (۹٪)</span>
+            <span>{/* مقدار مالیات */}</span>
+          </div>
+          <div className="flex justify-between font-bold text-lg text-gray-800 border-t pt-3">
+            <span>مبلغ نهایی</span>
+            <span>{/* مبلغ نهایی */}</span>
+          </div>
+        </div>
+
+        <button className="w-full mt-6 bg-green-600 hover:bg-green-700 text-white rounded-xl py-3 font-semibold transition">
+          ثبت سفارش
+        </button>
+      </aside>
+    </section>
   );
 }

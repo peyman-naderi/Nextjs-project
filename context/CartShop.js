@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import { getProductData } from "@/data/ProductData";
 
 export const CartContext = createContext({
@@ -13,10 +13,18 @@ export const CartContext = createContext({
 });
 
 export function CartProvider({ children }) {
-  // برای ذخیره کردن محصول در استیت
-  const [cartProduct, setCartProduct] = useState([]);
+  const [cartProduct, setCartProduct] = useState(() => {
+    if (typeof window !== "undefined") {
+      const storedCart = localStorage.getItem("cartItems");
+      return storedCart ? JSON.parse(storedCart) : [];
+    }
+    return [];
+  });
 
-  // برای نمایش و فهمیدن تعداد یک محصول
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartProduct));
+  }, [cartProduct]);
+
   function getProductQuantity(id) {
     const quantity = cartProduct.find((item) => item.id === id)?.quantity;
 
@@ -27,7 +35,6 @@ export function CartProvider({ children }) {
     return quantity;
   }
 
-  // برای افزودن محصول به صفحه خرید
   function addItemToCart(id) {
     const quantity = getProductQuantity(id);
 
@@ -42,7 +49,6 @@ export function CartProvider({ children }) {
     }
   }
 
-  // یک محصول خاص از صفحه خرید حذف شود
   function deleteFromCart(id) {
     setCartProduct((cartProducts) =>
       cartProducts.filter((item) => {
@@ -51,7 +57,6 @@ export function CartProvider({ children }) {
     );
   }
 
-  // این تابع فقط یک واحد از محصول کم میکند
   function removeItemFromCart(id) {
     const quantity = getProductQuantity(id);
     if (quantity === 1) {
@@ -65,11 +70,10 @@ export function CartProvider({ children }) {
     }
   }
 
-  // این تابع قیمت نهایی را محاسبه میکند
   function getTotlaAmount() {
     let totalAmount = 0;
 
-    cartProduct.map((item) => {
+    cartProduct.forEach((item) => {
       const productData = getProductData(item.id);
       totalAmount += productData.pris * item.quantity;
     });
