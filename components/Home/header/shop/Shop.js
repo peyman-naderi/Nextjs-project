@@ -33,22 +33,14 @@ export default function CartShopAll() {
 
           {/* بخش خلاصه سفارش */}
           <aside className="w-full lg:w-96 bg-white rounded-2xl shadow-md border p-6 sticky top-20 self-start">
-            <h2 className="text-xl font-semibold mb-4 text-right border-b pb-2">
+            <h2 className="text-xl font-semibold mb-4 text-right ">
               اطلاعات خرید
             </h2>
 
             <div className="space-y-6 text-gray-700 text-right">
-              <div className="flex justify-between text-base">
-                <span>جمع جزء</span>
-                <span>—</span>
-              </div>
-              <div className="flex justify-between text-base">
-                <span>مالیات (۹٪)</span>
-                <span>—</span>
-              </div>
               <div className="flex justify-between font-bold text-lg text-gray-800 border-t pt-3">
-                <span>مبلغ نهایی</span>
-                <span>—</span>
+                <span> مبلغ نهایی :</span>
+                <span>{cart.getTotlaAmount()}</span>
               </div>
             </div>
 
