@@ -1,8 +1,12 @@
 import BlogsPage from "@/components/Pages/BlogsPage/BlogsPage";
-export default function BlogsAll() {
+import { fetchPosts } from "@/lib/api"; // مسیر fetchPosts خودت
+
+export default async function BlogsAll() {
+  const posts = (await fetchPosts()) || []; // safe fallback
+
   return (
     <div>
-      <BlogsPage />
+      <BlogsPage posts={posts} />
     </div>
   );
 }

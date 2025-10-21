@@ -1,3 +1,5 @@
+"use client";
+import { useState, useEffect } from "react";
 import Header from "@/components/Home/header/Header";
 import HeroText from "@/components/Home/hero/HeroText";
 import SearchBox from "@/components/Home/hero/SearchBox";
@@ -9,7 +11,7 @@ import Blogs from "@/components/Home/blogsCards/Blogs";
 import Footer from "@/components/Home/footer/Footer";
 import { CartProvider } from "@/context/CartShop";
 
-export default function Home() {
+export default function Home(posts) {
   return (
     <CartProvider>
       <div className="font-vazirmatn">
@@ -26,7 +28,7 @@ export default function Home() {
           </div>
           <Comment />
           <div className="mx-4 backgrunds">
-            <Blogs />
+            <Blogs posts={posts} />
           </div>
           <Footer />
         </div>
