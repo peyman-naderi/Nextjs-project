@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+
 import Header from "@/components/Home/header/Header";
 import HeroText from "@/components/Home/hero/HeroText";
 import SearchBox from "@/components/Home/hero/SearchBox";
