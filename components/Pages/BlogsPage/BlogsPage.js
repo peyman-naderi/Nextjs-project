@@ -1,3 +1,4 @@
+"use client";
 import Header from "@/components/Home/header/Header";
 import Footer from "@/components/Home/footer/Footer";
 import SearchAndSort from "@/components/common/SearchAndSort";

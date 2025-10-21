@@ -1,3 +1,4 @@
+"use client";
 import LoginPage from "@/components/Home/header/auth/Login";
 
 export default function loginpages() {
